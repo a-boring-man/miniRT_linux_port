@@ -1,18 +1,18 @@
-![]()
+![](https://github.com/a-boring-man/miniRT_linux_port/blob/main/110_score_icon.png)
 
 # miniRT_linux
 
-portage du miniRT sur un linux. Cette version a des bugs. Projet en duo avec jrinna
+This is a mid-course project at 42 School. The project requires us to build a basic ray tracer.
 
-Status : Not finished
+We had to implement basic shapes like spheres, planes, and cylinders, handle ambient luminosity, lights, and instructions from a file. We also had to implement rotation and translation for all objects and a moving camera.
 
-Warning !!
+## Bonus
 
-This miniRT is a 3D motor without use of graphic hardware, this will use > 100% of your CPUs.
+There were multiple bonus features, including reflection, colored lights, and multiple spotlights.
 
-Beware of overheating.
+## Use
 
-Use :
+This is the linux port.
 
 0 : Requirements
 
@@ -24,6 +24,3 @@ miniRT_linux uses a linux version of minilibx
 1 : make
 
 2 : ./binary/miniRT map/****.rt
-
-
-Bonne journée !
