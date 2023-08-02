@@ -25,6 +25,8 @@ miniRT_linux uses a linux version of minilibx
 
 2 : ./binary/miniRT map/****.rt
 
+you can of course edit the map according to the subject rule.
+
 ## control
 
 C - goes into camera mode (the default mode frome where all other mode/control are available), this mode is available from all other mod and is use as a portal to change mod. You can control the camera using W and S to go forward or backward, right arrow key and left arrow key to turn right and left and up and down to pitch up and down.
