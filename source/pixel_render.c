@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:18:17 by jrinna            #+#    #+#             */
-/*   Updated: 2023/08/02 10:48:54 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 13:14:02 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,5 @@ void	ft_image_render(t_var *m)
 		}
 	}
 	mlx_put_image_to_window(m->init, m->win.ptr, m->img.ptr, 0, 0);
+	mlx_destroy_image(m->init, m->img.ptr);
 }

@@ -6,7 +6,7 @@
 #    By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/24 12:55:39 by jrinna            #+#    #+#              #
-#    Updated: 2023/08/02 11:39:01 by jrinna           ###   ########lyon.fr    #
+#    Updated: 2023/08/02 12:25:27 by jrinna           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ MLX := $(addprefix $(DIR_MLX)/,$(LST_MLX))
 
 #### OTHER ####
 CC := gcc
-CFLAGS := -Wall -Werror -Wextra
+CFLAGS := -Wall -Werror -Wextra -O3
 CFRAM := -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz
 NAME := $(DIR_BIN)/miniRT
 #### OTHER ####

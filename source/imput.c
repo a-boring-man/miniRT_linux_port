@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:41:15 by jrinna            #+#    #+#             */
-/*   Updated: 2023/08/02 10:50:59 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 13:16:00 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,5 @@ int	ft_imput_first(int key, void *mm)
 	else if (i == 4)
 		i = ft_imput_light(key, m);
 	dprintf(1, "end%d mode = %d\n", key, i);
-	ft_image_init(m);
 	return (0);
 }
