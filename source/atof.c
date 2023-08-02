@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 11:16:04 by jrinna            #+#    #+#             */
-/*   Updated: 2022/06/30 14:14:42 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 11:41:57 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,18 @@ int	ft_atoi(char *string)
 	return (signe * nbr);
 }
 
-static float	ft_atof_suite(float r, float tmp, char *line)
+static float	ft_atof_suite(float r, float tmp, char *line, char **split)
 {
+	int		i;
+
+	i = 0;
+	if (split[1])
+		i = ft_strlen_s(split[1]);
+	else
+		i = ft_strlen_s(split[0]);
+	ft_free_split(split);
+	while (i--)
+		tmp *= 0.1;
 	if (line[0] == '-')
 		r -= tmp;
 	else
@@ -81,14 +91,12 @@ static float	ft_atof_suite(float r, float tmp, char *line)
 float	ft_atof(char *line)
 {
 	float	r;
-	int		i;
 	float	second;
 	float	tmp;
 	char	**split;
 
 	r = 0;
 	tmp = 0;
-	i = 0;
 	second = 0;
 	if (!ft_strchr(line, '.') && ft_atol(line, &r))
 		return (r);
@@ -100,12 +108,5 @@ float	ft_atof(char *line)
 	else if (ft_strchr(line, '.') == line)
 		ft_atol(split[0], &second);
 	tmp = second;
-	if (split[1])
-		i = ft_strlen_s(split[1]);
-	else
-		i = ft_strlen_s(split[0]);
-	ft_free_split(split);
-	while (i--)
-		tmp *= 0.1;
-	return (ft_atof_suite(r, tmp, line));
+	return (ft_atof_suite(r, tmp, line, split));
 }

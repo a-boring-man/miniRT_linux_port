@@ -6,41 +6,11 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 15:41:15 by jrinna            #+#    #+#             */
-/*   Updated: 2023/07/19 14:53:34 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 10:50:59 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniRT.h"
-
-int	ft_please_stop(void *m)
-{
-	ft_exit(0, m);
-}
-
-int	ft_imput_sphere(int key, t_var *m)
-{
-	static int	i = 0;
-
-	if (key == K_CAMERA)
-		return (0);
-	if (key == K_CYLINDER)
-		return (2);
-	if (key == K_PLANE)
-		return (3);
-	if (key == K_LIGHT)
-		return (4);
-	if (key == K_PLUS)
-		i++;
-	if (key == K_MINUS)
-		i--;
-	if (i > m->ele.sp - 1)
-		i = 0;
-	if (i < 0)
-		i = m->ele.sp - 1;
-	ft_change_sphere(key, m, i);
-	dprintf(1, "sphere %d i = %d\n", key, i);
-	return (1);
-}
 
 int	ft_imput_cylinder(int key, t_var *m)
 {
@@ -141,7 +111,6 @@ int	ft_imput_first(int key, void *mm)
 	static int	i = 0;
 
 	m = (t_var *)mm;
-	//mlx_clear_window(m->init, m->win.ptr);
 	dprintf(1, "start%d mode = %d\n", key, i);
 	if (key == K_ESC)
 		ft_exit (0);

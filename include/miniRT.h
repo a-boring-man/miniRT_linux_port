@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   miniRT.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: njaros <njaros@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 13:19:13 by jrinna            #+#    #+#             */
-/*   Updated: 2022/07/01 13:36:53 by njaros           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 11:01:22 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,9 +197,9 @@ typedef struct s_win
 	int		height;
 }	t_win;
 
-typedef struct s_var t_var;
+typedef struct s_var	t_var;
 
-typedef struct	s_pixel_task
+typedef struct s_pixel_task
 {
 	int				i;
 	int				j;
@@ -225,7 +225,6 @@ typedef struct s_var{
 	pthread_t			*cpu;
 	int					nb_cpu;
 }	t_var;
-
 
 /* UTILS */
 /**

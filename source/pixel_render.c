@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pixel_render.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: njaros <njaros@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:18:17 by jrinna            #+#    #+#             */
-/*   Updated: 2022/07/01 08:34:26 by njaros           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 10:48:54 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,11 @@ void	ft_pixel_put(t_var *m, int i, int j, t_vec v)
 
 void	ft_image_render(t_var *m)
 {
-/*	int		i;
+	int		i;
 	int		j;
 	t_vec	tmp;
 
-	i = -1;*/
+	i = -1;
 	if (!m->ele.c)
 		ft_error(m, 6);
 	m->img.ptr = mlx_new_image(m->init, m->win.lenght, m->win.height);
@@ -80,8 +80,7 @@ void	ft_image_render(t_var *m)
 			&m->img.endian);
 	ft_mat_mat(ft_mat_rotz(m->ele.struc_c.angle_x),
 		ft_mat_roty(m->ele.struc_c.angle_z), &m->mat_rot);
-	thread_manager(m);
-	/*while (++i < m->win.height)
+	while (++i < m->win.height)
 	{
 		j = -1;
 		while (++j < m->win.lenght)
@@ -89,6 +88,6 @@ void	ft_image_render(t_var *m)
 			ft_mat_vec(m->vec[i * m->win.lenght + j], m->mat_rot, &tmp);
 			ft_pixel_put(m, i, j, tmp);
 		}
-	}*/
+	}
 	mlx_put_image_to_window(m->init, m->win.ptr, m->img.ptr, 0, 0);
 }

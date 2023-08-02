@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 12:06:59 by jrinna            #+#    #+#             */
-/*   Updated: 2023/07/19 14:53:30 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/08/02 10:50:12 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,6 @@ int	ft_imput_first(int key, void *mm)
 	static int	i = 0;
 
 	m = (t_var *)mm;
-	//mlx_clear_window(m->init, m->win.ptr);
 	if (key == K_ESC)
 		ft_exit (m, 0);
 	else if (i == 0)
